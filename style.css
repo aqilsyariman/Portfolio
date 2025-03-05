@@ -1,0 +1,381 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  background-color: #4d4b4b !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333333;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  color: #eaeaea;
+  justify-content: flex-end;
+}
+
+.navbar-features {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: 1fr;
+}
+
+.navbar-features > * {
+  align-self: center;
+  background-color: #007bff;
+  margin: 20px;
+  text-align: center;
+  border-radius: 30px;
+  transition: border-radius 0.2s ease-in-out;
+  font-size: smaller;
+  font-weight: bolder;
+}
+
+.navbar-features > *:last-child {
+  margin-right: 20px;
+}
+
+.navbar-features > *:hover {
+  border-radius: 0;
+}
+
+/* Profile Section */
+.profile {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-pic {
+  height: 250px;
+  width: 250px;
+  min-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-top: 25%;
+  flex: 1;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  color: #eaeaea;
+}
+.profile-text h1,
+.profile-text h2,
+.profile-text h3,
+.profile-text h4 {
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow text if needed */
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
+    display: inline-block; /* Ensures it only takes the needed width */
+}
+
+
+.profile-text * {
+  display: inline-block;
+  
+  /* text-align: center; */
+}
+
+.profile-text span {
+  color: #007bff;
+}
+
+#carouselExampleIndicators {
+  display: none;
+}
+
+/* Skills Section */
+.myskills {
+  width: 100%;
+  height: 800px;
+  display: block;
+}
+
+.header {
+  color: #007bff;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.about {
+  color: #eaeaea;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  padding: 50px 0;
+  width: 100%;
+}
+
+/* Features Section */
+.features-logo ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 50px 0;
+  list-style: none;
+}
+
+.html,
+.css,
+.js {
+  width: 150px;
+  height: 150px;
+  margin: 0 50px;
+}
+
+/* Projects Section */
+.myprojects {
+  padding: 60px;
+}
+
+.projects {
+  color: #eaeaea;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.ai,
+.tindog {
+  padding: 40px;
+}
+
+.ai {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  padding-left: 10%;
+}
+
+.ai p,
+.tindog p {
+  width: 600px;
+}
+
+.ai p a,
+.tindog p a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #eaeaea;
+}
+
+.ai p a:hover,
+.tindog p a:hover {
+  color: #007bff;
+}
+
+.tindog {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: minmax(600px, 600px) minmax(100px, 100px);
+  gap: 20px;
+  justify-content: end;
+}
+
+.tindog-text {
+  text-align: end;
+  max-width: 600px;
+}
+
+.tindog img {
+  order: 2;
+}
+
+/* Footer */
+.footer {
+  background-color: #4d4b4b;
+  color: #eaeaea;
+  font-size: 25px;
+  padding: 30px 0 50px;
+}
+
+.rights p {
+  padding-left: 80px;
+}
+
+.foter {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  text-align: center;
+}
+
+.features-footer {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.features-footer li:nth-child(2) {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.features-footer li:nth-child(3) {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.features-footer li:nth-child(4) {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.contact-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-icon li {
+  list-style: none;
+  padding: 10px;
+}
+
+.features-footer li a {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+.features-footer li a:hover {
+  color: #007bff;
+}
+
+@media (min-width: 769px) {
+  .navbar-features {
+    grid-template-columns: repeat(4, 200px);
+  }
+  .navbar-features {
+    font-size: larger;
+  }
+  .profile {
+    flex-direction: row;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-pic {
+    max-width: 250px;
+    height: 250px;
+    margin-left: 15%;
+    flex: 1;
+    margin-top: 0;
+  }
+
+  .profile-text {
+    margin: 0 30% 0 50px;
+    flex: 1;
+   
+  }
+}
+
+@media  (max-width:769px){
+  .profile-text{
+    text-align: center !important;
+  }
+  
+}
+@media (max-width: 703px) {
+  .navbar-features {
+    display: none;
+  }
+  .projects {
+    display: none !important;
+  }
+
+  #carouselExampleIndicators {
+    display: block !important;
+    width: 50% !important;
+    place-self: center !important;
+    margin-bottom: 100px !important; 
+  }
+}
+@media (max-width: 1700px) {
+  .about {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  .html,
+  .css,
+  .js {
+    width: 50% !important;
+    height: 50% !important;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: auto !important;
+    place-items: center !important;
+  }
+  .ai,
+  .tindog {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    place-items: center !important;
+    padding: 0 !important;
+  }
+  .ai img,
+  .tindog img {
+    width: auto !important;
+    align-self: center !important;
+  }
+  .ai-text,
+  .tindog-text {
+    grid-row-start: 2 !important;
+  }
+  .ai p,
+  .tindog p {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 1700px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .tindog {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+  }
+  .ai {
+   
+    gap: 20px;
+    justify-content: center;
+  }
+}
