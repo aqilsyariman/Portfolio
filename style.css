@@ -12,7 +12,7 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  background-color: #4d4b4b !important;
+  background-color: #1a1a2e !important;
   width: 100%;
   overflow-x: hidden;
 }
@@ -23,7 +23,7 @@ body {
   display: flex;
   width: 100%;
   height: 100px;
-  color: #eaeaea;
+  color: #ffffff;
   justify-content: flex-end;
 }
 
@@ -31,9 +31,18 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: 1fr;
+  list-style: none; /* Added for <ul> */
+  padding: 0; /* Added for <ul> */
+  margin: 0; /* Added for <ul> */
 }
 
-.navbar-features > * {
+.navbar-features li {
+  display: flex; /* Added for li */
+  align-items: center; /* Added for li */
+  justify-content: center; /* Added for li */
+}
+
+.navbar-features li a {
   align-self: center;
   background-color: #007bff;
   margin: 20px;
@@ -42,14 +51,19 @@ body {
   transition: border-radius 0.2s ease-in-out;
   font-size: smaller;
   font-weight: bolder;
+  width: 100%; /* Ensure link takes up space */
+  padding: 10px; /* Added for better touch targets */
+  color: #ffffff; /* Ensure text is visible */
+  text-decoration: none; /* Ensure no underline */
 }
 
-.navbar-features > *:last-child {
+.navbar-features li:last-child a {
   margin-right: 20px;
 }
 
-.navbar-features > *:hover {
+.navbar-features li a:hover {
   border-radius: 0;
+  color: #fff; /* Keep text color on hover */
 }
 
 /* Profile Section */
@@ -78,29 +92,28 @@ body {
   flex-direction: column;
   margin-top: 50px;
   margin-bottom: 150px;
-  color: #eaeaea;
+  color: #ffffff;
 }
 .profile-text h1,
 .profile-text h2,
 .profile-text h3,
 .profile-text h4 {
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Hides overflow text if needed */
-    text-overflow: ellipsis; /* Adds "..." if text overflows */
-    display: inline-block; /* Ensures it only takes the needed width */
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides overflow text if needed */
+  text-overflow: ellipsis; /* Adds "..." if text overflows */
+  display: inline-block; /* Ensures it only takes the needed width */
 }
-
 
 .profile-text * {
   display: inline-block;
-  
   /* text-align: center; */
 }
 
 .profile-text span {
-  color: #007bff;
+  color: #8892b0;
 }
 
+/* This is the carousel for mobile, hidden by default */
 #carouselExampleIndicators {
   display: none;
 }
@@ -121,7 +134,7 @@ body {
 }
 
 .about {
-  color: #eaeaea;
+  color: #ffffff;
   font-size: 25px;
   font-weight: 500;
   text-align: center;
@@ -129,41 +142,95 @@ body {
   width: 100%;
 }
 
-/* Features Section */
-.features-logo ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+/* Features Section (New Scroller) */
+.features-logo {
   width: 100%;
-  padding: 50px 0;
-  list-style: none;
+  overflow: hidden; /* This hides the logos as they scroll off-screen */
+  position: relative;
+
+  /* Adds a smooth fade effect on the edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 10%,
+    white 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 10%,
+    white 90%,
+    transparent
+  );
 }
 
-.html,
-.css,
-.js {
-  width: 150px;
-  height: 150px;
-  margin: 0 50px;
+.features-logo ul {
+  display: flex; /* Makes the list items horizontal */
+  width: max-content; /* Makes the <ul> as wide as all its content */
+  flex-shrink: 0; /* Prevents the list from shrinking */
+
+  /* Run the 'scroll' animation */
+  animation: scroll 10s linear infinite;
+
+  /* Resetting list styles */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+.features-logo ul li {
+  /* display: inline-block; */
+  padding: 0 40px; /* Space between logos */
+  flex-shrink: 0;
+}
+
+.features-logo ul li img {
+  width: 150px; /* Set a consistent logo size */
+  height: 150px;
+  object-fit: contain; /* Prevents logos from stretching */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .features-logo ul {
+    animation: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* --- END OF NEW SCROLLER CODE --- */
 
 /* Projects Section */
 .myprojects {
   padding: 60px;
 }
 
+/* THIS IS THE DESKTOP LAYOUT (Default) */
 .projects {
-  color: #eaeaea;
+  color: #ffffff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto; /* Allows flexible rows */
   gap: 30px;
 }
 
 .ai,
-.tindog {
-  padding: 40px;
+.tindog,
+.healthkit,
+.iot {
+  padding: 40px; /* Base padding */
 }
 
 .ai {
@@ -173,30 +240,32 @@ body {
   padding-left: 10%;
 }
 
-.ai p,
-.tindog p {
-  width: 600px;
-}
-
-.ai p a,
-.tindog p a {
-  text-decoration: none;
-  font-weight: bolder;
-  color: #eaeaea;
-}
-
-.ai p a:hover,
-.tindog p a:hover {
-  color: #007bff;
-}
-
+/* --- THIS IS THE FIX FOR .tindog --- */
 .tindog {
-  grid-row-start: 2;
-  grid-column-start: 2;
   display: grid;
-  grid-template-columns: minmax(600px, 600px) minmax(100px, 100px);
+  grid-template-columns: 1fr auto; /* Uses 1fr to fill space */
   gap: 20px;
-  justify-content: end;
+  /* 'justify-content: end;' is removed */
+}
+
+.healthkit {
+  /* This rule makes it span both columns and center */
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center; /* Center the image and the text-div */
+  gap: 20px;
+  padding: 40px 0; /* Reset padding for centered item */
+}
+
+.iot {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Text left, image right */
+  gap: 20px;
+}
+
+.iot img {
+  order: 2; /* Puts the image in the second column */
 }
 
 .tindog-text {
@@ -204,14 +273,42 @@ body {
   max-width: 600px;
 }
 
+.healthkit-text, .iot-text {
+  text-align: center;
+}
+
 .tindog img {
-  order: 2;
+  order: 2; /* This still works to put the image second */
+}
+
+.ai p,
+.tindog p,
+.healthkit p,
+.iot p {
+  max-width: 600px;
+  width: 100%;
+}
+
+.ai p a,
+.tindog p a,
+.healthkit p a,
+.iot p a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+.ai p a:hover,
+.tindog p a:hover,
+.healthkit p a:hover,
+.iot p a:hover {
+  color: #007bff;
 }
 
 /* Footer */
 .footer {
-  background-color: #4d4b4b;
-  color: #eaeaea;
+  background-color: #333333; /* Matched to navbar color */
+  color: #ffffff;
   font-size: 25px;
   padding: 30px 0 50px;
 }
@@ -263,12 +360,14 @@ body {
 
 .features-footer li a {
   text-decoration: none;
-  color: #eaeaea;
+  color: #ffffff;
 }
 
 .features-footer li a:hover {
   color: #007bff;
 }
+
+/* --- MEDIA QUERIES --- */
 
 @media (min-width: 769px) {
   .navbar-features {
@@ -295,87 +394,104 @@ body {
   .profile-text {
     margin: 0 30% 0 50px;
     flex: 1;
-   
   }
 }
 
-@media  (max-width:769px){
-  .profile-text{
+@media (max-width: 769px) {
+  .profile-text {
     text-align: center !important;
   }
-  
 }
+
+/* This query handles the mobile project/carousel swap */
 @media (max-width: 703px) {
   .navbar-features {
     display: none;
   }
+
+  /* Hides the grid layout on mobile */
   .projects {
     display: none !important;
   }
 
+  /* Shows the carousel layout on mobile */
   #carouselExampleIndicators {
     display: block !important;
     width: 50% !important;
     place-self: center !important;
-    margin-bottom: 100px !important; 
+    margin-bottom: 100px !important;
+    margin-left: auto; /* Center carousel */
+    margin-right: auto; /* Center carousel */
   }
 }
+
+/* THIS IS THE MOBILE/TABLET LAYOUT */
+/* This query handles stacking for tablets/medium screens */
 @media (max-width: 1700px) {
   .about {
     padding-left: 40px !important;
     padding-right: 40px !important;
   }
-  .html,
-  .css,
-  .js {
-    width: 50% !important;
-    height: 50% !important;
+
+  .features-logo ul li img {
+    width: 100px;
+    height: 100px;
   }
+
+  /* Makes the project layout 1-column */
   .projects {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-columns: 1fr;  */
+    grid-template-rows: auto; /* Let rows size naturally */
     width: auto !important;
     place-items: center !important;
   }
+
+  /* Centers ALL project blocks */
   .ai,
-  .tindog {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: 1fr 1fr !important;
+  .tindog,
+  .healthkit,
+  .iot {
+    /* grid-template-columns: 1fr !important; */
+    grid-template-rows: auto auto !important; /* Stack image and text */
     place-items: center !important;
     padding: 0 !important;
-  }
-  .ai img,
-  .tindog img {
-    width: auto !important;
-    align-self: center !important;
-  }
-  .ai-text,
-  .tindog-text {
-    grid-row-start: 2 !important;
-  }
-  .ai p,
-  .tindog p {
-    text-align: center !important;
-  }
-}
 
-@media (max-width: 1700px) {
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-  .tindog {
-    grid-row-start: 2;
-    grid-column-start: 1;
-    display: grid;
-    gap: 20px;
+    grid-row-start: auto; /* Let them flow naturally */
+    grid-column-start: auto; /* Let them flow naturally */
     justify-content: center;
   }
-  .ai {
-   
-    gap: 20px;
+
+  /* Makes ALL images the same size */
+  .ai img,
+  .tindog img,
+  .healthkit img,
+  .iot img {
+    width: 200px; /* Make the 'window' fill the container */
+    height: 200px; /* Give all images a fixed height */
+    object-fit: cover; /* Make the image cover the space, cropping if needed */
+    align-self: center !important;
+  }
+
+  /* Makes ALL text blocks centered */
+  .ai-text,
+  .tindog-text,
+  .healthkit-text,
+  .iot-text {
+    grid-row-start: 2 !important;
+    text-align: center !important; /* Center text */
+  }
+
+  .ai p,
+  .tindog p,
+  .healthkit p,
+  .iot p {
+    text-align: center !important;
+    max-width: 100%; /* Allow text to use full width */
+    padding: 0 15px; /* Add some padding */
+  }
+
+  .tindog {
+    /* This rule is just to override the desktop 'justify-content' */
     justify-content: center;
   }
 }
