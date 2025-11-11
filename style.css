@@ -100,9 +100,9 @@ body {
   .profile-text h2,
   .profile-text h3,
   .profile-text h4 {
-    white-space: normal;  /* This allows the text to wrap */
-    overflow: visible;    /* This ensures the wrapped text is not cut off */
-    display: block;       /* This helps it align center */
+    white-space: normal; /* This allows the text to wrap */
+    overflow: visible; /* This ensures the wrapped text is not cut off */
+    display: block; /* This helps it align center */
   }
 }
 .profile-text * {
@@ -274,7 +274,8 @@ body {
   max-width: 600px;
 }
 
-.healthkit-text, .iot-text {
+.healthkit-text,
+.iot-text {
   text-align: center;
 }
 
@@ -409,12 +410,14 @@ body {
   .navbar-features {
     display: none;
   }
-
+  .navbar {
+    display: none;
+  }
   /* Hides the grid layout on mobile */
   .projects {
     display: none !important;
   }
-  
+
   /* Shows the carousel layout on mobile */
   #carouselExampleIndicators {
     display: block !important;
@@ -436,9 +439,9 @@ body {
   /* Positions the caption inside this new "safe zone" */
   #carouselExampleIndicators .carousel-caption {
     /* This lifts the caption up so it doesn't hit the dots */
-    bottom: 0.5rem;
+    bottom: 0s.5rem;
   }
-  
+
   /* This rule makes your images smaller */
   #carouselExampleIndicators .carousel-item img {
     width: 55% !important;
