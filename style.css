@@ -172,7 +172,7 @@ body {
   flex-shrink: 0; /* Prevents the list from shrinking */
 
   /* Run the 'scroll' animation */
-  animation: scroll 3s linear infinite;
+  animation: scroll 5s linear infinite;
 
   /* Resetting list styles */
   list-style: none;
