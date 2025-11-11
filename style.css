@@ -411,7 +411,7 @@ body {
     display: none;
   }
   .navbar {
-    display: none;
+    display: none !important;
   }
   /* Hides the grid layout on mobile */
   .projects {
