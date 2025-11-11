@@ -436,12 +436,12 @@ body {
   /* Positions the caption inside this new "safe zone" */
   #carouselExampleIndicators .carousel-caption {
     /* This lifts the caption up so it doesn't hit the dots */
-    bottom: 2.5rem;
+    bottom: 0.5rem;
   }
   
   /* This rule makes your images smaller */
   #carouselExampleIndicators .carousel-item img {
-    width: 75% !important;
+    width: 55% !important;
     height: auto;
     margin: 0 auto;
   }
