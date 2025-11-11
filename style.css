@@ -427,7 +427,7 @@ body {
 
 /* THIS IS THE MOBILE/TABLET LAYOUT */
 /* This query handles stacking for tablets/medium screens */
-@media (max-width: 1700px) {
+@media (max-width: 2000px) {
   .about {
     padding-left: 40px !important;
     padding-right: 40px !important;
