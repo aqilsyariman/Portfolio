@@ -94,16 +94,17 @@ body {
   margin-bottom: 150px;
   color: #ffffff;
 }
-.profile-text h1,
-.profile-text h2,
-.profile-text h3,
-.profile-text h4 {
-  white-space: nowrap; /* Prevents text from wrapping */
-  overflow: hidden; /* Hides overflow text if needed */
-  text-overflow: ellipsis; /* Adds "..." if text overflows */
-  display: inline-block; /* Ensures it only takes the needed width */
+/* --- This is the new fix for small screens --- */
+@media (max-width: 458px) {
+  .profile-text h1,
+  .profile-text h2,
+  .profile-text h3,
+  .profile-text h4 {
+    white-space: normal;  /* This allows the text to wrap */
+    overflow: visible;    /* This ensures the wrapped text is not cut off */
+    display: block;       /* This helps it align center */
+  }
 }
-
 .profile-text * {
   display: inline-block;
   /* text-align: center; */
