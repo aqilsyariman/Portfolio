@@ -131,7 +131,7 @@ body {
   font-size: 50px;
   font-weight: 700;
   text-align: center;
-  padding: 50px 0;
+  padding: 10px 0;
 }
 
 .about {
@@ -172,7 +172,7 @@ body {
   flex-shrink: 0; /* Prevents the list from shrinking */
 
   /* Run the 'scroll' animation */
-  animation: scroll 10s linear infinite;
+  animation: scroll 3s linear infinite;
 
   /* Resetting list styles */
   list-style: none;
