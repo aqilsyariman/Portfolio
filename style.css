@@ -414,18 +414,38 @@ body {
   .projects {
     display: none !important;
   }
-
+  
   /* Shows the carousel layout on mobile */
   #carouselExampleIndicators {
     display: block !important;
     width: 50% !important;
     place-self: center !important;
     margin-bottom: 100px !important;
-    margin-left: auto; /* Center carousel */
-    margin-right: auto; /* Center carousel */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* --- NEW RULE 1 --- */
+  /* Makes the slide area taller, pushing the image up */
+  #carouselExampleIndicators .carousel-item {
+    /* This creates a 5rem "safe zone" at the bottom. */
+    padding-bottom: 5rem !important;
+  }
+
+  /* --- NEW RULE 2 --- */
+  /* Positions the caption inside this new "safe zone" */
+  #carouselExampleIndicators .carousel-caption {
+    /* This lifts the caption up so it doesn't hit the dots */
+    bottom: 2.5rem;
+  }
+  
+  /* This rule makes your images smaller */
+  #carouselExampleIndicators .carousel-item img {
+    width: 75% !important;
+    height: auto;
+    margin: 0 auto;
   }
 }
-
 /* THIS IS THE MOBILE/TABLET LAYOUT */
 /* This query handles stacking for tablets/medium screens */
 @media (max-width: 3000px) {
