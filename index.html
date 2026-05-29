@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Portfolio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -18,286 +17,332 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
     </style>
   </head>
   <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
       <ul class="navbar-features">
-        <li>
-          <a href="#my-profile" class="btn btn-primary navbar-profile">
-            Profile
-          </a>
-        </li>
-        <li>
-          <a href="#my-skills" class="btn btn-primary navbar-skills">
-            My Skills
-          </a>
-        </li>
-        <li>
-          <a href="#my-projects" class="btn btn-primary navbar-projects">
-            Projects
-          </a>
-        </li>
-        <li>
-          <a href="#my-contact" class="btn btn-primary navbar-contact">
-            Contact Me
-          </a>
-        </li>
+        <li><a href="#my-profile" class="btn btn-primary navbar-profile">Profile</a></li>
+        <li><a href="#my-skills" class="btn btn-primary navbar-skills">My Skills</a></li>
+        <li><a href="#my-projects" class="btn btn-primary navbar-projects">Projects</a></li>
+        <li><a href="#my-contact" class="btn btn-primary navbar-contact">Contact Me</a></li>
       </ul>
     </nav>
+
+    <!-- PROFILE -->
     <div class="profile" id="my-profile">
-      <img
-        class="profile-pic"
-        src="./images/profilepic.jpg"
-        alt="Profile photo of Aqil"
-      />
+      <img class="profile-pic" src="./images/profilepic.jpg" alt="Profile photo of Aqil" />
       <div class="profile-text">
         <h1>I'm <span>Aqil</span></h1>
-        <h2><span>App / Web Developer.</span></h2>
-        <h3>I’m a student / programmer and I like <span>code</span>.</h3>
-        <h4>
-          <a href="./projects/RESUME DEGREE.pdf" target="_blank">Resume</a>
-        </h4>
-        <h4>
-          <a href="https://github.com/aqilsyariman" target="_blank">Github</a>
-        </h4>
+        <h2><span>Undergraduate AI/GenAI Engineer.</span></h2>
+        <h3>I'm a student / programmer and I like <span>code</span>.</h3>
+        <h4><a href="./projects/GenAI_Engineer_Aqil.pdf" target="_blank">Resume</a></h4>
+        <h4><a href="https://github.com/aqilsyariman" target="_blank">Github</a></h4>
+        <h4><a href="https://www.linkedin.com/in/aqilsyariman" target="_blank">LinkedIn</a></h4>
       </div>
     </div>
+
+    <!-- SKILLS -->
     <div class="myskills" id="my-skills">
       <p class="header">My Skills</p>
       <p class="about">
         I started learning to code during my university studies, and it quickly
-        became my passion and expertise. Experienced in building web/mobile apps
-        with React Native, TypeScript, and JavaScript.
+        became my passion and expertise. Experienced in building AI/GenAI systems
+        with LangChain, RAG pipelines, and LLMs — alongside full-stack web and mobile apps.
       </p>
       <div class="features-logo">
         <ul>
-          <li>
-            <img src="./images/html.png" alt="HTML5 Logo" />
-          </li>
-          <li>
-            <img src="./images/css.png" alt="CSS3 Logo" />
-          </li>
-          <li>
-            <img src="./images/js.png" alt="JavaScript Logo" />
-          </li>
-          <li>
-            <img src="./images/atom.png" alt="React Logo" />
-          </li>
-
-          <li aria-hidden="true">
-            <img src="./images/html.png" alt="HTML5 Logo" />
-          </li>
-          <li aria-hidden="true">
-            <img src="./images/css.png" alt="CSS3 Logo" />
-          </li>
-          <li aria-hidden="true">
-            <img src="./images/js.png" alt="JavaScript Logo" />
-          </li>
-          <li aria-hidden="true">
-            <img src="./images/atom.png" alt="React Logo" />
-          </li>
+          <!-- Real set -->
+          <li><img src="./images/python.png" alt="Python Logo" /></li>
+          <li><img src="./images/langchain.png" alt="LangChain Logo" /></li>
+          <li><img src="./images/chroma.png" alt="ChromaDB Logo" /></li>
+          <li><img src="./images/atom.png" alt="React Logo" /></li>
+          <li><img src="./images/js.png" alt="JavaScript Logo" /></li>
+          <!-- Duplicate for seamless scroll -->
+          <li aria-hidden="true"><img src="./images/python.png" alt="Python Logo" /></li>
+          <li aria-hidden="true"><img src="./images/langchain.png" alt="LangChain Logo" /></li>
+          <li aria-hidden="true"><img src="./images/chroma.png" alt="ChromaDB Logo" /></li>
+          <li aria-hidden="true"><img src="./images/atom.png" alt="React Logo" /></li>
+          <li aria-hidden="true"><img src="./images/js.png" alt="JavaScript Logo" /></li>
         </ul>
       </div>
     </div>
+
+<!-- PROJECTS -->
     <div class="myprojects" id="my-projects">
       <h1 class="header">Projects</h1>
-      <div class="projects">
-        <div class="ai">
-          <img
-            src="./images/ai.png"
-            alt="Screenshot of AI Loan Approval System"
-          />
-          <div class="ai-text">
-            <p>
-              <a
-                href="./projects/MINI PROJECT REPORT_LOAN APPROVAL  SYSTEM.pdf"
-                target="_blank"
-                >Artificial Intelligence - LOAN APPROVAL SYSTEM</a
-              >
-            </p>
-            <p>
-              An AI-powered system that analyzes financial data to predict loan
-              approval outcomes, enhancing decision-making with accuracy and
-              efficiency.
-            </p>
+      <div class="projects-grid">
+
+        <!-- Card 1: Semiconductor AI -->
+        <div class="pcard pcard--wide pcard--left">
+          <img src="./images/ai.png" alt="Semiconductor AI Platform" class="pcard__img" />
+          <div class="pcard__body">
+            <span class="pcard__tag">RAG · LLM · Streamlit</span>
+            <h3 class="pcard__title">Semiconductor AI Intelligence Platform</h3>
+            <p class="pcard__desc">Multi-document RAG pipeline ingesting Intel and Micron datasheets with FlashRank re-ranking, precise citation, and persistent chat memory. Built with LangChain, ChromaDB, LLaMA 3.3 70B.</p>
+            <div class="pcard__links">
+              <a href="https://semiconductor-ai-intelligence.streamlit.app/" target="_blank" class="pcard__link">🚀 Live Demo →</a>
+              <a href="https://github.com/aqilsyariman/semiconductor-spec-ai" target="_blank" class="pcard__link">GitHub →</a>
+            </div>
           </div>
         </div>
-        <div class="healthkit">
-          <img
-            src="./images/healthkit.png"
-            alt="Screenshot of System Mental Well Being"
-          />
-          <div class="healthkit-text"> <p>
-              <a
-                href="./projects/221302390_MUHAMMAD AQIL SYARIMAN BIN SAFWAN JAMAL_FYP1_FINAL.pdf"
-                target="_blank"
-                >Student Mental Well-Being System (Final Year Project Degree)</a
-              >
-              <a
-                href="https://github.com/aqilsyariman/StudentMentalHealthSystem"
-                target="_blank"
-                > - Source Code</a
-              >
-            </p>
-            <p>
-              Developed a cross-platform React Native app to monitor student
-              well-being via smartwatch data with healthKit framework (iOS) ,
-              providing real-time feedback and actionable insights by analyzing
-              biometric data.
-            </p>
+
+        <!-- Card 2: RAG Assistant -->
+        <div class="pcard pcard--small">
+          <img src="./images/ai.png" alt="RAG Assistant" class="pcard__img" />
+          <div class="pcard__body">
+            <span class="pcard__tag">RAG · ChromaDB · Groq</span>
+            <h3 class="pcard__title">RAG Assistant</h3>
+            <p class="pcard__desc">Foundational RAG pipeline with PDF ingestion, semantic search, and hallucination prevention. Deployed on Streamlit Cloud.</p>
+            <div class="pcard__links">
+              <a href="https://rag-assistant-a5zcvxbwcse77sqnxztdsp.streamlit.app/" target="_blank" class="pcard__link">🚀 Live Demo →</a>
+              <a href="https://github.com/aqilsyariman/rag-assistant" target="_blank" class="pcard__link">GitHub →</a>
+            </div>
           </div>
         </div>
-        
-        <div class="tindog">
-          <img src="./images/tindog.png" alt="Screenshot of TinDog Website" />
-          <div class="tindog-text">
-            <p>
-              <a href="./11.3 TinDog Project/index.html"
-                >TinDog – A Modern, Responsive Pet Matching Website</a
-              >
-            </p>
-            <p>
-              A sleek and responsive website built using Bootstrap, designed to
-              showcase a pet-matching service with a clean UI and seamless user
-              experience.
-            </p>
+
+        <!-- Card 3: Mental Well-Being (full width) -->
+        <div class="pcard pcard--full pcard--horizontal">
+          <img src="./images/healthkit.png" alt="Mental Well-Being App" class="pcard__img pcard__img--large" />
+          <div class="pcard__body">
+            <span class="pcard__tag">React Native · Firebase · HealthKit · FYP Degree</span>
+            <h3 class="pcard__title">Student Mental Well-Being System</h3>
+            <p class="pcard__desc">Cross-platform React Native app monitoring student well-being via smartwatch biometric data with HealthKit (iOS), Firebase Firestore real-time sync, and an analytics dashboard for historical trends.</p>
+            <div class="pcard__links">
+              <a href="https://github.com/aqilsyariman/StudentMentalHealthSystem" target="_blank" class="pcard__link">GitHub →</a>
+            </div>
           </div>
         </div>
-        <div class="iot">
-          <img src="./images/iot.png" alt="Youtube link for fyp diploma" />
-          <div class="iot-text">
-            <p>
-              <a href="https://youtu.be/Oq4TfSO9SSM"
-                >Smart Door Security System (Final Year Project Diploma)</a
-              >
-            </p>
-            <p>
-              An IoT-based security system using Arduino and GSM technology for
-              keypad access control and real-time unauthorized access alerts via
-              SMS.
-            </p>
+
+        <!-- Card 4: Smart Poultry -->
+        <div class="pcard pcard--small">
+          <img src="./images/iot.png" alt="Smart Poultry Habitat" class="pcard__img" />
+          <div class="pcard__body">
+            <span class="pcard__tag">C · ESP32 · IoT · React Native</span>
+            <h3 class="pcard__title">Smart Poultry Habitat</h3>
+            <p class="pcard__desc">ESP32 programmed in C for real-time sensor processing, with bidirectional pipeline to a React Native app.</p>
+            <div class="pcard__links">
+              <a href="https://github.com/aqilsyariman/SmartPoultry" target="_blank" class="pcard__link">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Loan Approval -->
+        <div class="pcard pcard--wide pcard--right">
+          <div class="pcard__body">
+            <span class="pcard__tag">Python · Scikit-learn · ML</span>
+            <h3 class="pcard__title">AI-Based Loan Approval System</h3>
+            <p class="pcard__desc">ML pipeline with Scikit-learn, Pandas, and NumPy to preprocess imbalanced financial datasets and train classification models for loan default risk evaluation.</p>
+            <div class="pcard__links">
+              <a href="./projects/MINI PROJECT REPORT_LOAN APPROVAL  SYSTEM.pdf" target="_blank" class="pcard__link">📄 View Report →</a>
+            </div>
+          </div>
+          <img src="./images/ai.png" alt="Loan Approval System" class="pcard__img" />
+        </div>
+
+        <!-- Card 6: Smart Door (full width) -->
+        <div class="pcard pcard--full pcard--horizontal">
+          <img src="./images/iot.png" alt="Smart Door Security" class="pcard__img pcard__img--large" />
+          <div class="pcard__body">
+            <span class="pcard__tag">Arduino · GSM · IoT · FYP Diploma · 🥈 Silver Award</span>
+            <h3 class="pcard__title">Smart Door Security System</h3>
+            <p class="pcard__desc">IoT-based security system using Arduino and GSM for keypad access control and real-time unauthorized access alerts via SMS. Won Silver Award as team leader.</p>
+            <div class="pcard__links">
+              <a href="https://youtu.be/Oq4TfSO9SSM" target="_blank" class="pcard__link">▶️ Watch Demo →</a>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
 
-    <div
-  id="carouselExampleIndicators"
-  class="carousel slide"
-  data-bs-ride="carousel"
->
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="1"
-      aria-label="Slide 2"
-    ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="2"
-      aria-label="Slide 3"
-    ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="3"
-      aria-label="Slide 4"
-    ></button>
-  </div>
+    <style>
+      .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 0 60px 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <a
-        href="./projects/MINI PROJECT REPORT_LOAN APPROVAL  SYSTEM.pdf"
-        target="_blank"
-      >
-        <img
-          class="d-block w-100"
-          src="./images/ai.png"
-          alt="AI Loan Approval System"
-        />
+      .pcard {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s, border-color 0.2s;
+      }
+
+      .pcard:hover {
+        transform: translateY(-4px);
+        border-color: #007bff;
+      }
+
+      .pcard--full {
+        grid-column: 1 / -1;
+      }
+
+      .pcard--horizontal {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        padding: 32px;
+      }
+
+      .pcard--wide, .pcard--small {
+        grid-column: span 1;
+      }
+
+      .pcard__img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        background: rgba(255,255,255,0.03);
+        padding: 20px;
+      }
+
+      .pcard--horizontal .pcard__img--large {
+        width: 180px;
+        height: 180px;
+        flex-shrink: 0;
+        border-radius: 12px;
+      }
+
+      .pcard__body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+      }
+
+      .pcard--horizontal .pcard__body {
+        padding: 0;
+      }
+
+      .pcard__tag {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: #007bff;
+      }
+
+      .pcard__title {
+        font-size: 22px;
+        font-weight: 800;
+        margin: 0;
+        color: #ffffff;
+      }
+
+      .pcard__desc {
+        font-size: 14px;
+        color: rgba(255,255,255,0.65);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .pcard__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 4px;
+      }
+
+      .pcard__link {
+        font-size: 13px;
+        font-weight: 600;
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .pcard__link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 703px) {
+        .projects-grid { display: none !important; }
+      }
+
+      @media (max-width: 900px) and (min-width: 704px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+          padding: 0 20px 40px;
+        }
+        .pcard--full { grid-column: 1; }
+        .pcard--horizontal { flex-direction: column; }
+        .pcard--horizontal .pcard__img--large { width: 100%; height: 160px; }
+      }
+    </style>
+
+    <!-- MOBILE CAROUSEL -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://github.com/aqilsyariman" target="_blank">
+            <img class="d-block w-100" src="./images/ai.png" alt="Semiconductor AI Platform" />
+          </a>
+          <div class="carousel-caption"><h5>Semiconductor AI Platform</h5></div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://github.com/aqilsyariman" target="_blank">
+            <img class="d-block w-100" src="./images/ai.png" alt="RAG Assistant" />
+          </a>
+          <div class="carousel-caption"><h5>RAG Assistant</h5></div>
+        </div>
+        <div class="carousel-item">
+          <a href="./projects/221302390_MUHAMMAD AQIL SYARIMAN BIN SAFWAN JAMAL_FYP1_FINAL.pdf" target="_blank">
+            <img class="d-block w-100" src="./images/healthkit.png" alt="Mental Well-Being App" />
+          </a>
+          <div class="carousel-caption"><h5>Mental Well-Being App</h5></div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://github.com/aqilsyariman" target="_blank">
+            <img class="d-block w-100" src="./images/iot.png" alt="Smart Poultry Habitat" />
+          </a>
+          <div class="carousel-caption"><h5>Smart Poultry Habitat</h5></div>
+        </div>
+        <div class="carousel-item">
+          <a href="./projects/MINI PROJECT REPORT_LOAN APPROVAL  SYSTEM.pdf" target="_blank">
+            <img class="d-block w-100" src="./images/ai.png" alt="Loan Approval System" />
+          </a>
+          <div class="carousel-caption"><h5>AI Loan Approval System</h5></div>
+        </div>
+        <div class="carousel-item">
+          <a href="https://youtu.be/Oq4TfSO9SSM" target="_blank">
+            <img class="d-block w-100" src="./images/iot.png" alt="Smart Door Security" />
+          </a>
+          <div class="carousel-caption"><h5>Smart Door Security</h5></div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
       </a>
-      <div class="carousel-caption">
-        <h5>AI Loan Approval System</h5>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <a href="./11.3 TinDog Project/index.html">
-        <img
-          class="d-block w-100"
-          src="./images/tindog.png"
-          alt="TinDog Website"
-      /></a>
-      <div class="carousel-caption">
-        <h5>TinDog Website</h5>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <a
-        href="./projects/221302390_MUHAMMAD AQIL SYARIMAN BIN SAFWAN JAMAL_FYP1_FINAL.pdf"
-      >
-        <img
-          class="d-block w-100"
-          src="./images/healthkit.png"
-          alt="healthkit"
-      /></a>
-      <div class="carousel-caption">
-        <h5>Mental Well-being App</h5>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <a href="https://youtu.be/Oq4TfSO9SSM">
-        <img class="d-block w-100" src="./images/iot.png" alt="IoT Project" />
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
       </a>
-      <div class="carousel-caption">
-        <h5>Smart Door Security System</h5>
-      </div>
     </div>
-  </div>
 
-  <a
-    class="carousel-control-prev"
-    href="#carouselExampleIndicators"
-    role="button"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </a>
-  <a
-    class="carousel-control-next"
-    href="#carouselExampleIndicators"
-    role="button"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </a>
-</div>
-------------------------------------- Footer ----------------------------------------------------
+    <!-- FOOTER -->
     <footer class="footer" id="my-contact">
       <div class="rights">
-        <p>&copy; 2025 Aqil. All Rights Reserved.</p>
+        <p>&copy; 2026 Aqil. All Rights Reserved.</p>
       </div>
       <div class="foter">
         <ul class="features-footer">
@@ -307,57 +352,44 @@
           <li>
             Contact:
             <ul class="contact-icon">
+              <!-- Instagram -->
               <li>
                 <a href="https://www.instagram.com/aqiliman._/" target="_blank">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-instagram"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                   </svg>
                 </a>
               </li>
+              <!-- Email -->
               <li>
                 <a href="mailto:aqilsyariman2411@gmail.com">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-envelope"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
                   </svg>
                 </a>
               </li>
+              <!-- LinkedIn -->
               <li>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  fill="currentColor"
-                  class="bi bi-twitter-x"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
-                  />
-                </svg>
+                <a href="https://www.linkedin.com/in/aqilsyariman" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                  </svg>
+                </a>
+              </li>
+              <!-- GitHub -->
+              <li>
+                <a href="https://github.com/aqilsyariman" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                  </svg>
+                </a>
               </li>
             </ul>
           </li>
         </ul>
       </div>
     </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
